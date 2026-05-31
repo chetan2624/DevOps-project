@@ -30,7 +30,12 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    background: var(--bg);
+    background-color: var(--bg);
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 48px 48px;
+    background-position: 0 0;
     color: var(--text);
     font-family: var(--sans);
     font-size: 15px;
@@ -227,7 +232,12 @@
 
   /* PROJECT CARD */
   .project-card {
-    background: var(--card);
+    background: linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px),
+      var(--card);
+    background-size: 48px 48px;
+    background-position: 0 0;
+    background-blend-mode: overlay;
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
@@ -317,6 +327,27 @@
     color: var(--muted);
     line-height: 1.6;
     flex: 1;
+  }
+
+  .card-button {
+    align-self: flex-start;
+    background: rgba(15, 19, 32, 0.75);
+    border: 1px solid var(--border2);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .card-button:hover {
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    transform: translateY(-1px);
   }
 
   .card-highlight {
@@ -476,7 +507,7 @@
     <div class="projects-grid">
 
       <!-- 1 -->
-      <div class="project-card" data-level="beginner" data-title="python github api automation">
+      <div class="project-card" data-level="beginner" data-title="python github api automation" data-url="https://youtu.be/HvNU4dupQkg?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -518,11 +549,12 @@
             <span class="tech-tag">REST</span>
             <span class="tech-tag">JSON</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 2 -->
-      <div class="project-card" data-level="beginner" data-title="ci cd pipeline docker github actions">
+      <div class="project-card" data-level="beginner" data-title="ci cd pipeline docker github actions" data-url="https://www.youtube.com/live/kuUHV0I0YwM?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -560,11 +592,12 @@
             <span class="tech-tag">GitHub Actions</span>
             <span class="tech-tag">CI/CD</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 3 -->
-      <div class="project-card" data-level="beginner" data-title="kubernetes 2048 game alb ingress deploy">
+      <div class="project-card" data-level="beginner" data-title="kubernetes 2048 game alb ingress deploy" data-url="https://youtu.be/RRCrY12VY_s?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -602,11 +635,12 @@
             <span class="tech-tag">AWS</span>
             <span class="tech-tag">Helm</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 4 -->
-      <div class="project-card" data-level="beginner" data-title="docker multistage build container size reduce">
+      <div class="project-card" data-level="beginner" data-title="docker multistage build container size reduce" data-url="https://youtu.be/yyJrZgoNal0?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -642,11 +676,12 @@
             <span class="tech-tag">Multi-stage</span>
             <span class="tech-tag">Dockerfile</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 5 -->
-      <div class="project-card" data-level="beginner" data-title="terraform infrastructure as code azure iac">
+      <div class="project-card" data-level="beginner" data-title="terraform infrastructure as code azure iac" data-url="https://youtu.be/hj5gbhSmftE?si=aBSN5ufQxCrxcBD1&utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -684,6 +719,7 @@
             <span class="tech-tag">HCL</span>
             <span class="tech-tag">IaC</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
@@ -704,7 +740,7 @@
     <div class="projects-grid">
 
       <!-- 6 -->
-      <div class="project-card" data-level="intermediate" data-title="kubernetes monitoring prometheus grafana helm">
+      <div class="project-card" data-level="intermediate" data-title="kubernetes monitoring prometheus grafana helm" data-url="https://youtu.be/6xmWr7p5TE0?si=My2ArbQc7cKWkqUK&utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -747,11 +783,12 @@
             <span class="tech-tag">Prometheus</span>
             <span class="tech-tag">Grafana</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 7 -->
-      <div class="project-card" data-level="intermediate" data-title="jira ticket automation python flask api">
+      <div class="project-card" data-level="intermediate" data-title="jira ticket automation python flask api" data-url="https://youtu.be/YVjXwyJlHgg?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -787,11 +824,12 @@
             <span class="tech-tag">Jira APIs</span>
             <span class="tech-tag">REST</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 8 -->
-      <div class="project-card" data-level="intermediate" data-title="terraform vpc aws networking subnets">
+      <div class="project-card" data-level="intermediate" data-title="terraform vpc aws networking subnets" data-url="https://youtu.be/Koabqyopqns?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -830,11 +868,12 @@
             <span class="tech-tag">Subnets</span>
             <span class="tech-tag">Security Groups</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 9 -->
-      <div class="project-card" data-level="intermediate" data-title="gitops argocd kubernetes microservices helm docker">
+      <div class="project-card" data-level="intermediate" data-title="gitops argocd kubernetes microservices helm docker" data-url="https://github.com/vishakhasadhwani/devops-ai-playbook/tree/main/projects?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -876,11 +915,12 @@
             <span class="tech-tag">Helm</span>
             <span class="tech-tag">GitOps</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 10 -->
-      <div class="project-card" data-level="intermediate" data-title="aws lambda cloud cost optimization serverless">
+      <div class="project-card" data-level="intermediate" data-title="aws lambda cloud cost optimization serverless" data-url="https://youtu.be/OKYJCHHSWb4?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -917,11 +957,12 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">Boto3</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 11 -->
-      <div class="project-card" data-level="intermediate" data-title="local llm dockerfile generation ai devops">
+      <div class="project-card" data-level="intermediate" data-title="local llm dockerfile generation ai devops" data-url="https://www.youtube.com/watch?v=Yr8si-1sTKw&utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -960,6 +1001,7 @@
             <span class="tech-tag">Ollama</span>
             <span class="tech-tag">Python</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
@@ -980,7 +1022,7 @@
     <div class="projects-grid">
 
       <!-- 12 -->
-      <div class="project-card" data-level="advanced" data-title="aiops log analysis isolation forest anomaly detection ml">
+      <div class="project-card" data-level="advanced" data-title="aiops log analysis isolation forest anomaly detection ml" data-url="https://youtu.be/-eOncnzG9tc?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1024,11 +1066,12 @@
             <span class="tech-tag">Log Analysis</span>
             <span class="tech-tag">scikit-learn</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 13 -->
-      <div class="project-card" data-level="advanced" data-title="keda predictive scaling kubernetes ai autoscaling">
+      <div class="project-card" data-level="advanced" data-title="keda predictive scaling kubernetes ai autoscaling" data-url="https://github.com/kedacore/keda?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1064,11 +1107,12 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">ML Models</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 14 -->
-      <div class="project-card" data-level="advanced" data-title="ai agent kubernetes crewai diagnose ops agentic">
+      <div class="project-card" data-level="advanced" data-title="ai agent kubernetes crewai diagnose ops agentic" data-url="https://youtu.be/fLWP5d-1jiM?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1107,11 +1151,12 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">AI Agents</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 15 -->
-      <div class="project-card" data-level="advanced" data-title="kubernetes kyverno security policy admission control">
+      <div class="project-card" data-level="advanced" data-title="kubernetes kyverno security policy admission control" data-url="https://youtu.be/5ihkMblumD0?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1150,11 +1195,12 @@
             <span class="tech-tag">Policy-as-Code</span>
             <span class="tech-tag">Security</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 16 -->
-      <div class="project-card" data-level="advanced" data-title="terraform cloudformation migration aws infrastructure">
+      <div class="project-card" data-level="advanced" data-title="terraform cloudformation migration aws infrastructure" data-url="https://youtu.be/-4IMy5ihiiU?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1190,11 +1236,12 @@
             <span class="tech-tag">AWS</span>
             <span class="tech-tag">IaC Migration</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 17 -->
-      <div class="project-card" data-level="advanced" data-title="jenkins docker kubernetes argocd cicd enterprise pipeline">
+      <div class="project-card" data-level="advanced" data-title="jenkins docker kubernetes argocd cicd enterprise pipeline" data-url="https://youtu.be/JGQI5pkK82w?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1241,11 +1288,12 @@
             <span class="tech-tag">Kubernetes</span>
             <span class="tech-tag">ArgoCD</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 18 -->
-      <div class="project-card" data-level="advanced" data-title="rag vector database llm documentation internal ai agent">
+      <div class="project-card" data-level="advanced" data-title="rag vector database llm documentation internal ai agent" data-url="https://youtu.be/Naw35ovkXGc?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1292,11 +1340,12 @@
             <span class="tech-tag">Vector DBs</span>
             <span class="tech-tag">LangChain</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 19 -->
-      <div class="project-card" data-level="advanced" data-title="aws bedrock lambda genai serverless production end to end">
+      <div class="project-card" data-level="advanced" data-title="aws bedrock lambda genai serverless production end to end" data-url="https://youtu.be/3OP39y4dO_Y?si=ZjzjCF2Fy3AL8NXW&utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1334,11 +1383,12 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">API Gateway</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
       <!-- 20 -->
-      <div class="project-card" data-level="advanced" data-title="aiops incident analysis prometheus grafana llm observability capstone">
+      <div class="project-card" data-level="advanced" data-title="aiops incident analysis prometheus grafana llm observability capstone" data-url="https://github.com/vishakhasadhwani/devops-ai-playbook/tree/main/projects/aiops-assistant?utm_source=www.tech5ense.com&utm_medium=referral&utm_campaign=20-devops-ai-projects-to-build-in-2026">
         <div class="card-thumb">
           <svg class="card-thumb-art" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
             <rect width="340" height="160" fill="#0f1320"/>
@@ -1391,6 +1441,7 @@
             <span class="tech-tag">Prometheus</span>
             <span class="tech-tag">Grafana</span>
           </div>
+          <button class="card-button" type="button">Open Project</button>
         </div>
       </div>
 
@@ -1445,6 +1496,24 @@
       section.style.display = visible === 0 ? 'none' : '';
     });
   }
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    const url = card.dataset.url;
+    if (!url) return;
+    card.addEventListener('click', () => {
+      window.open(url, '_blank', 'noopener');
+    });
+  });
+
+  document.querySelectorAll('.card-button').forEach(button => {
+    button.addEventListener('click', event => {
+      event.stopPropagation();
+      const card = button.closest('.project-card');
+      const url = card?.dataset.url;
+      if (!url) return;
+      window.open(url, '_blank', 'noopener');
+    });
+  });
 </script>
 
 </body>
