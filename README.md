@@ -12,7 +12,7 @@
 <br/>
 
 <!-- TYPING SVG #2 — Subtitle cycling -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2500&pause=800&color=7C3AED&center=true&vCenter=true&multiline=false&width=560&height=40&lines=Curated+by+Vishakha+Sadhwani+%E2%9C%A6+2026+Edition;Build+real+systems%2C+not+just+tutorials;Try+at+least+1+project+this+week+%F0%9F%9A%80" alt="Typing subtitle" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2500&pause=800&color=7C3AED&center=true&vCenter=true&multiline=false&width=560&height=40&lines=Curated+by+Chetan+vani+%E2%9C%A6+2026+Edition;Build+real+systems%2C+not+just+tutorials;Try+at+least+1+project+this+week+%F0%9F%9A%80" alt="Typing subtitle" />
 
 <br/><br/>
 
@@ -363,6 +363,6 @@
 
 <br/><br/>
 
-![footer](https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:0a0e1a&height=140&section=footer&text=Vishakha+Sadhwani&fontSize=22&fontColor=ffffff&fontAlignY=65&desc=vishakhasadhwani.beehiiv.com&descSize=13&descColor=94ccff&descAlignY=82)
+![footer](https://capsule-render.vercel.app/api?type=waving&color=0:00d4ff,50:7c3aed,100:0a0e1a&height=140&section=footer&text=Chetan+vani&fontSize=22&fontColor=ffffff&fontAlignY=65&desc=chetanvani.beehiiv.com&descSize=13&descColor=94ccff&descAlignY=82)
 
 </div>
